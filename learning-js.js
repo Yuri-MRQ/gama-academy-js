@@ -25,20 +25,27 @@ function render() {
     lists.forEach(function(list){
         const item = document.createElement('li')
         const remove_item = document.createElement('button')
+        const spanElement = document.createElement('span')
 
         // create new item
         item.classList.add('item' + counter.toString())
         item.id = 'new-item' + counter.toString()
+
         // create new button to remove
         remove_item.classList.add('remove')
         remove_item.id = counter.toString()
 
+        // create span
+        spanElement.classList.add('tooltiptext')
+
         // add the text
         remove_item.innerText = '-'
         item.innerText = list.name
+        spanElement.innerText = 'Remove'
 
         listContainer.appendChild(item)
         item.appendChild(remove_item)
+        remove_item.appendChild(spanElement)
 
         counter ++
 
