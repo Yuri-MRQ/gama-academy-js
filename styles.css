@@ -13,3 +13,8 @@ input{
 button{
 
 }
+
+.to-dos {
+    padding: 20px;
+    width: 170px;
+}
